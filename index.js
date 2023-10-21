@@ -230,4 +230,69 @@ buttonActive.addEventListener("click", () => {
 
 displayContent1();
 
+//api key  
 
+
+
+//api call for finding the location
+
+if ("geolocation" in navigator) {
+    // The Geolocation API is available in the user's browser.
+
+    navigator.geolocation.getCurrentPosition(function (position) {
+        // The user's location is available in the `position` object.
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+
+        // You can use the latitude and longitude for your application.
+        console.log("Latitude: " + latitude);
+        console.log("Longitude: " + longitude);
+        findCityName(longitude,latitude);
+    }, function (error) {
+        // Handle any errors that occur during the geolocation request.
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                console.error("User denied the request for geolocation.");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                console.error("Location information is unavailable.");
+                break;
+            case error.TIMEOUT:
+                console.error("The request to get user location timed out.");
+                break;
+            default:
+                console.error("An unknown error occurred.");
+                break;
+        }
+    });
+} else {
+    // The Geolocation API is not available in the user's browser.
+    console.error("Geolocation is not available in this browser.");
+}
+
+
+async function findCityName(longitude,latitude){
+    let ans={"Results":[{"Distance":0.020473593593960417,"address":"Ambikapur, Surguja, Chhattisgarh, India","city":"Ambikapur","region":"Chhattisgarh","subregion":"Surguja","country":"India","longitude":83.184845,"latitude":23.134208}]}
+
+      
+const url = `https://address-from-to-latitude-longitude.p.rapidapi.com/geolocationapi?lat=${latitude}&lng=${longitude}`;
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '1df765ec1bemsh0d5e9644fb85c11p16bf0djsn69bac089d648',
+		'X-RapidAPI-Host': 'address-from-to-latitude-longitude.p.rapidapi.com'
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.json();
+	console.log(result.Results[0].city);
+    const locationInp=document.getElementById("locationInput");
+
+    locationInp.value=`${result.Results[0].city}`;
+
+} catch (error) {
+	console.error(error);
+}
+}
