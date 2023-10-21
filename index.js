@@ -16,7 +16,7 @@ const f2=document.getElementById("heroform2");
 
 const cardc=document.getElementById("cardc");
 
-
+let currlocation;
 
 
 let step=0;
@@ -109,9 +109,10 @@ function handleClick(){
 function addFiles(){
     const curdate=new Date();
     const creationDate=curdate.getDate()+"/"+curdate.getMonth()+"/"+curdate.getFullYear();
-
+    currlocation;
+    console.log(currlocation);
     const newrow=document.createElement("tr");
-    newrow.innerHTML=`<td><input type="checkbox"></td><td><div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked></div></td><td><div class="insTa"><img src="./images/Gilroy-FREE/unsplash_S2jw81lfrG0.svg" alt=""><div><h3>Come Bluberry cake Campaign</h3><p>Created on 14 july</p></div></div></div></td><td>July 25 - August 1, 2020</td><td>300</td><td>INR 3,400</td><td>Chennai</td><td><img src="./images//Gilroy-FREE/Group 2.svg" alt=""></td><td><div class="status-live" style="width: 104px; height: 30px; flex-shrink: 0;">Live now</div></td><td><img src="./images/Gilroy-FREE/edit-2.svg" alt="" onclick=del(event)> <img src="./images/Gilroy-FREE/trash.svg" alt="" onclick=del(event)></td>
+    newrow.innerHTML=`<td><input type="checkbox"></td><td><div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked></div></td><td><div class="insTa"><img src="./images/Gilroy-FREE/unsplash_S2jw81lfrG0.svg" alt=""><div><h3>Come Bluberry cake Campaign</h3><p>Created on 14 july</p></div></div></div></td><td>July 25 - August 1, 2020</td><td>300</td><td>INR 3,400</td><td>${location}</td><td><img src="./images//Gilroy-FREE/Group 2.svg" alt=""></td><td><div class="status-live" style="width: 104px; height: 30px; flex-shrink: 0;">Live now</div></td><td><img src="./images/Gilroy-FREE/edit-2.svg" alt="" onclick=del(event)> <img src="./images/Gilroy-FREE/trash.svg" alt="" onclick=del(event)></td>
     `;
     ;
     const tableBody=document.getElementById("tableBody");
@@ -279,7 +280,7 @@ const url = `https://address-from-to-latitude-longitude.p.rapidapi.com/geolocati
 const options = {
 	method: 'GET',
 	headers: {
-		'X-RapidAPI-Key': '1df765ec1bemsh0d5e9644fb85c11p16bf0djsn69bac089d648',
+		'X-RapidAPI-Key': 'df765ec1bemsh0d5e9644fb85c11p16bf0djsn69bac089d648',
 		'X-RapidAPI-Host': 'address-from-to-latitude-longitude.p.rapidapi.com'
 	}
 };
@@ -289,7 +290,7 @@ try {
 	const result = await response.json();
 	console.log(result.Results[0].city);
     const locationInp=document.getElementById("locationInput");
-
+    currlocation=result.Results[0].city;
     locationInp.value=`${result.Results[0].city}`;
 
 } catch (error) {
