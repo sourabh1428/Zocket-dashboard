@@ -12,17 +12,24 @@ const mainContent=document.getElementById("mainContent");
 const hero=document.getElementById("hero");
 const hero11=document.getElementById("hero1-1");
 
+const f2=document.getElementById("heroform2");
+
+const cardc=document.getElementById("cardc");
+
+
 
 
 let step=0;
 // const stepsForm=[form1,form2,form3];
-const f2=document.createElement("div");
-f2.classList="heroform";
-f2.innerHTML = '<div class="card"><img src="./images/users.svg" alt=""><div><h3>Get Customer Leads</h3><p>Sourabh take action</p></div></div><div class="card"><img src="./images/users.svg" alt=""><div><h3>GetCustomerLeads</h3><p>Sourabhtakeaction</p></div></div><div class="card"><img src="./images/users.svg" alt=""><div><h3>GetCustomerLeads</h3><p>Sourabhtakeaction</p></div></div><div class="card"><img src="./images/users.svg" alt=""><div><h3>GetCustomerLeads</h3><p>Sourabhtakeaction</p></div></div><div class="card"><img src="./images/users.svg" alt=""><div><h3>GetCustomerLeads</h3><p>Sourabhtakeaction</p></div></div><div class="card"><img src="./images/users.svg" alt=""><div><h3>GetCustomerLeads</h3><p>Sourabhtakeaction</p></div></div><div class="card"><img src="./images/users.svg" alt=""><div><h3>GetCustomerLeads</h3><p>Sourabhtakeaction</p></div></div><div class="card"><img src="./images/users.svg" alt=""><div><h3>GetCustomerLeads</h3><p>Sourabhtakeaction</p></div></div><div class="card"><img src="./images/users.svg" alt=""><div><h3>GetCustomerLeads</h3><p>Sourabhtakeaction</p></div></div>';
 
 
+let form1data=[];
+let form2data=[];
+let form3data=[];
+let form4data=[];
 
-formHandler.append(f2);
+// let finalData=[form1data,form2data,form3data,form4data];
+
 
 const headings=["What you want to do","Choose Product" ,"Campaign Settings","Ready to go"];
 const formItems=[f1,f2,f3,f4];
@@ -31,7 +38,7 @@ function updateIconsText(step){
     if(step==2){
         document.getElementById("step2Bold").style.fontWeight="bold";
         document.getElementById("step2Bold").style.color="black";
-        console.log(document.getElementById("step2Bold"));
+       
     }
     if(step==3){
         document.getElementById("step3Bold").style.fontWeight="bold";
@@ -44,6 +51,17 @@ function updateIconsText(step){
         document.getElementById("step4Bold").style.fontWeight="bold";
     }
 }
+function refixText(){
+    document.getElementById("step2Bold").style.fontWeight="light";
+    document.getElementById("step2Bold").style.color="gray";
+    document.getElementById("step3Bold").style.fontWeight="light";
+    document.getElementById("step3Bold").style.color="gray";
+    document.getElementById("step4Bold").style.color="gray";
+
+    document.getElementById("step4Bold").style.fontWeight="light";
+
+}
+
 
 function updateIcons(step){
     if(step==2){
@@ -56,22 +74,52 @@ function updateIcons(step){
         document.getElementById("stepimg4").setAttribute("src","./images/steps/step4c.svg");
     }
 }
+function refixIcons(){
+    
+        document.getElementById("stepimg2").setAttribute("src","./images/Ellipse 1350.svg");
+    
 
+       document.getElementById("stepimg3").setAttribute("src","./images/Group 17278.svg");
+    
+    
+        document.getElementById("stepimg4").setAttribute("src","./images/Ellipse 1351.svg");
+    
+}
 
 
 function handleClick(){
     console.log(step);
-    if(step==4){
+    if(step>=4){
+        addFiles();
         displayContent1();
+        refixIcons();
+        refixText();
+        step=0;
     }
     displayContent();
     headingStep.innerText=`${headings[step-1]}`
     //updating step state
     stepLocate.innerText=`Step ${step} of 4`;
+   
     updateIconsText(step);
     updateIcons(step);
 
 }
+
+function addFiles(){
+    const curdate=new Date();
+    const creationDate=curdate.getDate()+"/"+curdate.getMonth()+"/"+curdate.getFullYear();
+
+    const newrow=document.createElement("tr");
+    newrow.innerHTML=`<td><input type="checkbox"></td><td><div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked></div></td><td><div class="insTa"><img src="./images/Gilroy-FREE/unsplash_S2jw81lfrG0.svg" alt=""><div><h3>Come Bluberry cake Campaign</h3><p>Created on 14 july</p></div></div></div></td><td>July 25 - August 1, 2020</td><td>300</td><td>INR 3,400</td><td>Chennai</td><td><img src="./images//Gilroy-FREE/Group 2.svg" alt=""></td><td><div class="status-live" style="width: 104px; height: 30px; flex-shrink: 0;">Live now</div></td><td><img src="./images/Gilroy-FREE/edit-2.svg" alt="" onclick=del(event)> <img src="./images/Gilroy-FREE/trash.svg" alt="" onclick=del(event)></td>
+    `;
+    ;
+    const tableBody=document.getElementById("tableBody");
+    tableBody.appendChild(newrow);
+
+}
+
+
    
 
 function displayContent() {
@@ -139,6 +187,47 @@ async function displayContent2(){
     displayContent();
     
 }
+const cards = document.querySelectorAll(".card");
+cards.forEach(card => {
+    card.addEventListener("click", cardEvent);
+});
+
+
+ function cardEvent(event)
+{
+    
+    const clickedCard = event.currentTarget;
+    
+    const h1Element = clickedCard.querySelector('h1');
+    const pElement = clickedCard.querySelector('p');
+
+    if (h1Element && pElement) {
+        const h1Value = h1Element.textContent;
+        const pValue = pElement.textContent;
+
+        console.log("Title (h1):", h1Value);
+        console.log("Paragraph (p):", pValue);
+    } else {
+        console.log("Either <h1> or <p> element is missing in the clicked card.");
+    }
+}
+
+
+const buttonActive = document.getElementById("nf1b1");
+
+buttonActive.addEventListener("click", () => {
+    const btnActive = buttonActive.querySelector("#nf1bActive");
+    const btnInactive = buttonActive.querySelector("button:not(#nf1bActive)");
+
+    // Check if the active button exists and toggle the IDs
+    if (btnActive && btnInactive) {
+        btnActive.removeAttribute("id");
+        btnInactive.id = "nf1bActive";
+    }
+});
+
 
 
 displayContent1();
+
+

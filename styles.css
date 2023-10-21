@@ -56,7 +56,7 @@
 }
 .left-content{
         width: 82px;
-    height: 949px;
+    height: 1700px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -154,22 +154,13 @@
     line-height: 32px; /* 228.571% */
 }
 
-.card{
-        width: 389px;
-    height: 80px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    border: 1.5px solid #F3F3F3;
-    background-color: white;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-around;
-}
+
 .card div{
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: flex-start;
 }
 .card div h3{
     color: #0B1A33;
@@ -280,6 +271,20 @@ text-decoration-line: underline;
     font-style: normal;
     font-weight: 500;
     background-color: #0F6EFF;
+    line-height: 32px; /* 228.571% */
+}
+#nf1binActive{
+    width: 50%;
+    border-radius: 30px;
+    border: none;
+    height: 39px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Eudoxus Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    background-color: #eef5ff;
     line-height: 32px; /* 228.571% */
 }
 .nf1i input{
@@ -655,3 +660,41 @@ background: url(<path-to-image>), lightgray 50% / cover no-repeat;
     font-weight: 400;
     line-height: 32px; /* 228.571% */
   }
+  .card{
+        width: 389px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1.5px solid #F3F3F3;
+    background-color: white;
+    display: flex;
+    flex-direction: row !important;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+
+
+#cardc:hover{
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+   z-index: 10;
+    background-color: #f8f8f8;
+    transform: scale(1.1);
+    transition: ease-in 1;
+    transition-duration: 0.5s;
+}
+
+#createCampaignButton:hover{
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+    background-color: #317C2E;
+}
+
+#contButton:hover{
+    transform: scale(1.1)  !important;
+    transition-duration: 0.2s;
+    background-color: #2B23A5;
+}
