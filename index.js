@@ -112,7 +112,7 @@ function addFiles(){
     currlocation;
     console.log(currlocation);
     const newrow=document.createElement("tr");
-    newrow.innerHTML=`<td><input type="checkbox"></td><td><div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked></div></td><td><div class="insTa"><img src="./images/Gilroy-FREE/unsplash_S2jw81lfrG0.svg" alt=""><div><h3>Come Bluberry cake Campaign</h3><p>Created on 14 july</p></div></div></div></td><td>July 25 - August 1, 2020</td><td>300</td><td>INR 3,400</td><td>${location}</td><td><img src="./images//Gilroy-FREE/Group 2.svg" alt=""></td><td><div class="status-live" style="width: 104px; height: 30px; flex-shrink: 0;">Live now</div></td><td><img src="./images/Gilroy-FREE/edit-2.svg" alt="" onclick=del(event)> <img src="./images/Gilroy-FREE/trash.svg" alt="" onclick=del(event)></td>
+    newrow.innerHTML=`<td><input type="checkbox"></td><td><div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked></div></td><td><div class="insTa"><img src="./images/Gilroy-FREE/unsplash_S2jw81lfrG0.svg" alt=""><div><h3>Come Bluberry cake Campaign</h3><p>Created on ${creationDate}</p></div></div></div></td><td>July 25 - August 1, 2020</td><td>300</td><td>INR 3,400</td><td>${location}</td><td><img src="./images//Gilroy-FREE/Group 2.svg" alt=""></td><td><div class="status-live" style="width: 104px; height: 30px; flex-shrink: 0;">Live now</div></td><td><img src="./images/Gilroy-FREE/edit-2.svg" alt="" onclick=del(event)> <img src="./images/Gilroy-FREE/trash.svg" alt="" onclick=del(event)></td>
     `;
     ;
     const tableBody=document.getElementById("tableBody");
@@ -188,30 +188,7 @@ async function displayContent2(){
     displayContent();
     
 }
-const cards = document.querySelectorAll(".card");
-cards.forEach(card => {
-    card.addEventListener("click", cardEvent);
-});
 
-
- function cardEvent(event)
-{
-    
-    const clickedCard = event.currentTarget;
-    
-    const h1Element = clickedCard.querySelector('h1');
-    const pElement = clickedCard.querySelector('p');
-
-    if (h1Element && pElement) {
-        const h1Value = h1Element.textContent;
-        const pValue = pElement.textContent;
-
-        console.log("Title (h1):", h1Value);
-        console.log("Paragraph (p):", pValue);
-    } else {
-        console.log("Either <h1> or <p> element is missing in the clicked card.");
-    }
-}
 
 
 const buttonActive = document.getElementById("nf1b1");
@@ -292,8 +269,36 @@ try {
     const locationInp=document.getElementById("locationInput");
     currlocation=result.Results[0].city;
     locationInp.value=`${result.Results[0].city}`;
-
+    return currlocation;
 } catch (error) {
 	console.error(error);
 }
 }
+
+
+
+// Get all card elements
+const cards = document.querySelectorAll(".card");
+const cards2=document.querySelectorAll(".card4");
+// Add a click event listener to each card
+
+cards2.forEach(card4 => {
+    card4.addEventListener("click", function() {
+        // Remove the 'selected' class from all cards
+        cards2.forEach(c => c.classList.remove('selected'));
+        
+        // Add the 'selected' class to the clicked card
+        this.classList.add('selected');
+    });
+});
+
+
+cards.forEach(card => {
+    card.addEventListener("click", function() {
+        // Remove the 'selected' class from all cards
+        cards.forEach(c => c.classList.remove('selected'));
+        
+        // Add the 'selected' class to the clicked card
+        this.classList.add('selected');
+    });
+});
