@@ -1,0 +1,657 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+.nav-bar{
+    width: 98%;
+    height: 80px;
+    flex-shrink: 0;
+        border: 1px 0px 0px 0px  solid #DAE6FF;
+    background: #FFF;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+
+.nav-bar> p{
+    color: rgba(0, 0, 0, 0.60);
+    font-family: Eudoxus Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 266.667% */
+}
+.nav-bar>div img{
+        width: 16px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+.nav-bar >div{
+        width: 88px;
+    height: 32px;
+    flex-shrink: 0;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: row;
+    background-color: #F29A2E1A;
+}
+
+.nav-bar>div>p{
+    color: #FF8C00;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Eudoxus Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.left-content{
+        width: 82px;
+    height: 949px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: #001738;
+}
+.main-Content{
+    display: flex;
+    flex-direction: column;
+}
+.hero{
+    width: 95%;
+    gap: 10px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(199, 148, 52);
+    justify-content: space-between;
+    justify-content: space-around;
+        border-radius: 10px;
+    border: 1px solid #DAE6FF;
+    background: #F6F9FF;
+
+}
+.hero11{
+    display: flex;
+    flex-direction: column;
+    background: #F6F9FF;
+    padding: 50px;
+    padding-left: 100px;
+    align-items:flex-start;
+}
+
+.hero12img{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+.hero12-inactive-text{
+        color: #ABB6C5;
+    font-family: Eudoxus Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.28px;
+}
+.hero12-active-text{
+        color: #0B1A33;
+    font-family: Eudoxus Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.32px;
+}
+
+.hero13{
+    
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.heroform{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+}
+.hero13-top{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    
+}
+.hero13-top h1{
+    color: #000;
+    font-family: Eudoxus Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 200% */
+}
+.hero13-top p{
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Eudoxus Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 228.571% */
+}
+
+.card{
+        width: 389px;
+    height: 80px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1.5px solid #F3F3F3;
+    background-color: white;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+.card div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.card div h3{
+    color: #0B1A33;
+    font-family: Eudoxus Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.32px;
+}
+.card div p{
+    color: rgba(11, 26, 51, 0.50);
+    font-family: Eudoxus Sans;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.26px;
+}
+.hero13-button{
+
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+#contButton{
+    border: none;
+    width: 237px;
+    height: 50px;
+    flex-shrink: 0;
+    color: #FFF;
+    border-radius: 10px;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Eudoxus Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+line-height: normal;background-color: #0F6EFF;
+}
+
+
+#contButton :hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+.newForm{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    width: 899px;
+    height: 784px;
+    padding: 30px;
+    flex-shrink: 0;
+    gap: 20px;
+}
+.nf1{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.nf1 h2{
+    color: #000;
+font-family: Eudoxus Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 32px; /* 228.571% */
+text-decoration-line: underline;
+}
+.nf1 p{
+    color: #606060;
+    font-family: Eudoxus Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 266.667% */
+}
+.nf1b{
+    width: 250px;
+    height: 39px;
+    flex-shrink: 0;
+}
+.nf1b button{
+    width: 50%;
+    border-radius: 30px;
+    border: none;
+    height: 39px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Eudoxus Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    background-color: #96b3de;
+    line-height: 32px; /* 228.571% */
+}
+#nf1bActive{
+    width: 50%;
+    border-radius: 30px;
+    border: none;
+    height: 39px;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: Eudoxus Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    background-color: #0F6EFF;
+    line-height: 32px; /* 228.571% */
+}
+.nf1i input{
+    width: 363px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1.5px solid #E9E9E9;
+}
+
+.nf2{
+    display: flex;
+    height: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nf2i{
+    width: 744px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1.5px solid #E9E9E9;
+}
+
+
+
+
+.range{
+    appearance: none;
+    -webkit-appearance: none;
+    background: linear-gradient(90deg, rgb(0, 0, 255) 60%, rgb(0, 0, 0) 40%);
+    height: 10px;
+    width: 100%;
+    outline: none
+  }
+  .range::-webkit-slider-thumb{
+      appearance: none;
+    -webkit-appearance: none;
+    background-color: #fff;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    border: 1px solid #333;
+    outline: none;
+  }
+  
+  span{
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px
+  }
+
+  .calIn{
+    position: relative;
+    left: -41px;
+    top: 5px;
+  }
+  .form4{
+    
+    width: 1000px;
+    height: 600px;
+  }
+
+  .cards4{
+    display: flex;
+    gap: 20px;
+
+}
+
+  .card4{
+        width: 288.939px;
+    height: 366.486px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF;
+    border-radius: 20px;
+    padding: 10px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .c4up{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+  }
+  .c4up h3{
+    color: #2B23A5;
+    font-family: Gilroy-SemiBold;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px; /* 143.75% */
+  }
+  .c4up p{
+    color: #767676;
+    font-family: Gilroy-Medium, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 200% */
+  }
+
+
+  .c4mid p{
+    color: #000;
+    font-family: Gilroy-Medium, sans-serif;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; /* 142.857% */
+  }
+  .c4buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
+  .c4buttons button{
+    border-radius: 5px;
+    background: rgba(15, 110, 255, 0.10);
+    width: 121.1px;
+    height: 33.993px;
+    flex-shrink: 0;
+    border: none;
+    color: #0F6EFF;
+    font-family: Eudoxus Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 266.667% */  
+}
+
+.left-content{
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    padding: 10px;
+    align-items: center;
+}
+.left-content img{
+
+    width: 46px;
+    height: 46px;
+}
+.left-content div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-around;
+}
+.left-content> div img{
+        width: 21px;
+    height: 21px;
+}
+
+.newHero{
+ 
+    background: #F6F9FF;
+    height: 100%;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+.nh1{
+    display: flex;
+    flex-direction:row;
+    position: block;
+    align-items: center;
+    padding: 50px;
+    justify-content: space-around;
+}
+
+.nh1 h2{
+    color: #000;
+    font-family: Eudoxus Sans;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+    }
+.nh1 p{
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Eudoxus Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 200% */
+    }
+    .nh1 button{
+        color: #FFF;
+        border: none;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Eudoxus Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+        width: 237px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 20px;
+        background-color: #0F6EFF;
+}
+
+.nh2{
+
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: white;
+    border-radius: 30px;
+}
+.nh2opt{
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+    align-items: center;
+    padding:30px;
+    justify-content: space-around;
+
+}
+
+.nh2opt input{
+    width: 315px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1.5px solid #E9E9E9;
+    padding: 10px;
+}
+
+.nh2opt div{
+    display: flex;
+    gap:30px;
+}
+.nh2opt select{
+    color: #000;
+    font-family: Eudoxus Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 200% */
+    border: 1px solid wheat;
+}
+
+.nh3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+
+.rollouts{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr 3fr 3fr 1fr 2fr 2fr 2fr 2fr 2fr;
+    border: 1px solid black;
+    background-color: rebeccapurple;
+}
+.rolhead{
+    width: 100%;
+    grid-template-columns: 1fr 2fr 3fr 3fr 1fr 2fr 2fr 2fr 2fr 2fr;
+}
+
+
+
+table {
+   width: 90%;
+    border: 1px solid rgb(209, 209, 209);
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 20px;
+  }
+  
+  thead {
+    background-color: #ccc;
+    border-radius: 10px;
+    border: 1.5px solid #EAEAEA;
+    background: #F8F8F8;
+    color: rgba(0, 0, 0, 0.50);
+    font-family: Eudoxus Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 228.571% */
+  }
+  
+  .status-live {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 24px;
+    background: #E1FFE0;
+    color: #317C2E;
+    font-family: Eudoxus Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  
+  .status-paused {
+ 
+  }
+  
+  .status-exhausted {
+    background-color: rgb(255, 255, 255);
+  }
+
+  .insTa{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .insTa img{
+    width: 58px;
+height: 54px;
+flex-shrink: 0;border-radius: 5px;
+background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+  }
+  .insTa h3{
+    color: #000;
+    font-family: Eudoxus Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 228.571% */
+  }
+  .insTa div{
+    position: relative;
+    top: 10px;
+    display: flex;
+    height: 54px;
+    flex-direction: column;
+    
+    align-items: flex-start;
+    justify-content: space-evenly;
+    
+
+  }
+  .insTa p{
+    color: rgba(0, 0, 0, 0.60);
+    font-family: Eudoxus Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 266.667% */
+  }
+  td{
+    color: #000;
+    font-family: Eudoxus Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px; /* 228.571% */
+  }
